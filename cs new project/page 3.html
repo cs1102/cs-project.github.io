@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Voice input method</title> 
+</head>
+<meta charset = "UTF-8">
+<style>
+
+    body {
+            background-color: #f1ee8e;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 150px;
+            background-color: skyblue;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index:1;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .content{
+            margin-left: 180px;
+            z-index: 2;
+        }
+
+
+
+
+    #blu{
+        color: rgb(100, 149, 237 );
+        font-weight : bold;
+    }
+    
+    #re{
+        color: rgb(192, 57, 43);
+        font-weight : bold;
+    }
+    
+    table, td{
+        border:1px solid black}
+    }
+
+    .highlight{color: red;}
+    .highlight1{background-color: yellow;}
+
+    
+</style>
+<style>
+    span { color:red;
+        font-weight : bold;}    
+</style>
+
+<body>
+    <div class="sidebar">
+        <a href="index.html">Main Page</a>
+        <a href="page 1.html">Stroke count method</a>
+        <a href="page 2.html">Pinyin input method</a>
+        <a href="page 3.html">Voice input method</a>
+        <a href="page 4.html">Cangjie input method</a>
+        <a href="Quiz.html">Quiz</a>
+        <a href="Reference.html">Reference List and Discovery</a>
+    </div>
+    <div class="content">
+    <h1> CS1102 - Course Project - 2022/2023 Semester B </h1>
+
+
+    <div>
+        <table>
+        <tr>
+            <td>Name</td>
+            <td>SID</td>
+        </tr>
+        
+        <tr>
+            <td>Wong Wing Kiu</td>
+            <td>55696770</td>
+        </tr>
+        
+        <tr>
+            <td>Cheng Chun Kit</td>
+            <td>56418743</td>
+        </tr>
+        
+        <tr>
+            <td>Chan Reymond Young</td>
+            <td>56621155</td>
+        </tr>
+        
+        <tr>
+            <td>Lam Kevin</td>
+            <td>56617479</td>
+        </tr>
+        </table>
+    </div> 
+
+    <div>
+    <h1>Voice input method </h1>
+    <center><img src="https://i.imgur.com/PdwtOu5.jpg" width="400"/></center>
+    <p>The ability of a machine or program to receive and interpret dictation or to comprehend and carry out spoken commands is known as voice or speaker recognition. <span class="highlight2">People with impairments now find it much simpler to use computers thanks to this voice recognition technology</span>. With the development of artificial intelligence (AI) and intelligent personal assistants like Apple's Siri and Amazon's Alexa, voice recognition has become more common and useful.<p>
+
+    <p>Voice recognition systems provide hands-free requests, reminders, and other basic activities by allowing users to engage with technology merely by speaking to it.</p>
+
+
+
+    <p>Automatically <span class="highlight">convert human voice content into corresponding text by computer</span>. Entry of text without using an on-screen or physical keyboard. </p>
+    <br/>
+    <div>
+        <table>
+        <tr>
+            <td>Advantages</td>
+            <td>Disadvantages</td>
+        </tr>
+        <tr>
+            <td>
+            <ol>
+                <li>Can be used <span class="highlight1">without </span> learning any input method.</li>
+                <li>The speed of the voice input method is fast, the speed of the voice input method can reach about <span class="highlight1"> 200 to 300 words </span> per minute.</li>
+                <li>It is helpful for people with <span>visually impaired</span>.</li>
+            </ol>
+            </td>
+            <td>
+            <ol>
+                <li>When voice input, it will inevitably be affected by the <span class="highlight1"> surrounding environment</span></li>
+                <li>Difficult to use where it <span class="highlight1">needs to be quiet</span>.</li>
+                <li>Occasionally there are <span class="highlight1"> inaccurate </span> entries.</li>
+            </ol>
+            </td>
+        </tr>
+    </table>
+    </div>  
+    <h2>Our experience:</h2>
+    <p><img src="Reymond.jpeg" width="100"/><span>Reymond</span>: Although voice input is fast, it often makes mistakes. If you count the correction time, it takes about the same time as other input methods.</p>
+    <p><img src="girl1.png" width="100"/><span>Winkie</span>: Sometimes I only know how to read some words, but I don’t know how to write them. Voice input can help me solve this problem.</p>
+    <p><img src="Terrence.jpeg" width="100"/><span>Terrence</span>: It is not convenient to use voice input in public places, it is easy to attract the attention of others, so it is a bit awkward.</p>
+    <p><img src="Kevin.jpeg" width="100"/><span>Kevin</span>: I think voice input can also exercise my language organization ability, because I need to think clearly about what to say before voice input.</p>
+
+    <img src="Users.jpeg" width="100"/><div style="display: inline-block;" id="opinionDisplay"></div>
+    <textarea id="opinion" rows="4" cols="50">Tell us do you like this method!</textarea>
+    <button onclick="submitOpinion()">Submit</button>
+<br>
+    
+    <a href="main page.html"target="_blank">Back to main page</a><p align="right"><a href="page 4.html"target="_blank">Next page</a></p>
+
+    <script>
+        function submitOpinion() {
+            var opinionText = document.getElementById("opinion").value;
+            var opinionDisplay = document.getElementById("opinionDisplay");
+            opinionDisplay.innerHTML = opinionText;
+            document.getElementById("opinion").value = "";
+        }
+    </script>
+</div>
+</div>
+</body>
+</html>

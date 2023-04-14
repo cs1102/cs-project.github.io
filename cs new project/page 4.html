@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Cangjie input method</title> 
+</head>
+<meta charset = "UTF-8">
+<style>
+
+    body {
+            background-color: #f1ee8e;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 150px;
+            background-color: skyblue;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index:1;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .content{
+            margin-left: 180px;
+            z-index: 2;
+        }
+
+
+
+
+    #blu{
+        color: rgb(100, 149, 237 );
+        font-weight : bold;
+    }
+    
+    #re{
+        color: rgb(192, 57, 43);
+        font-weight : bold;
+    }
+    
+    table, td{
+        border:1px solid black}
+    }
+
+    .highlight{color: red;}
+    .highlight1{background-color: yellow;}
+
+    
+</style>
+<style>
+    span { color:red;
+        font-weight : bold;}    
+</style>
+
+<body>
+    <div class="content">
+
+    <div class="sidebar">
+        <a href="index.html">Main Page</a>
+        <a href="page 1.html">Stroke count method</a>
+        <a href="page 2.html">Pinyin input method</a>
+        <a href="page 3.html">Voice input method</a>
+        <a href="page 4.html">Cangjie input method</a>
+        <a href="Quiz.html">Quiz</a>
+        <a href="Reference.html">Reference List and Discovery</a>
+    </div>
+    <h1> CS1102 - Course Project - 2022/2023 Semester B </h1>
+    <div>
+        <table>
+        <tr>
+            <td>Name</td>
+            <td>SID</td>
+        </tr>
+        
+        <tr>
+            <td>Wong Wing Kiu</td>
+            <td>55696770</td>
+        </tr>
+        
+        <tr>
+            <td>Cheng Chun Kit</td>
+            <td>56418743</td>
+        </tr>
+        
+        <tr>
+            <td>Chan Reymond Young</td>
+            <td>56621155</td>
+        </tr>
+        
+        <tr>
+            <td>Lam Kevin</td>
+            <td>56617479</td>
+        </tr>
+        </table>
+    </div> 
+    <h1>Cangjie input method </h1>
+    <center><img src="https://historyofinformation.com/images/%E5%80%89%E9%A0%A1%E8%BC%B8%E5%85%A5%E6%B3%95_%E6%8B%86%E7%A2%BC.jpg" width="400"/><br><img src="https://i.imgur.com/g32EjDh.png" width="400"/></center>
+    <p>
+      Chu Bong-Foo, a Chinese computer engineer who lived and worked in Taiwan between 1972 and 1978, created the Cangjie input method, which enables <span class="highlight"> Chinese characters to be entered into a computer using a regular QWERTY keyboard</span>.
+    </p>
+
+    <p>A method of using a regular computer keyboard to type Chinese characters into a computer. It summed up <span class="highlight">24 "Cangjie alphabets" and 76 "auxiliary fonts" </span> derived from these basic letters according to the glyph structure and composition principles of Chinese characters. </p>
+    <br/>
+    
+        <table>
+        <tr>
+            <td>Advantages</td>
+            <td>Disadvantages</td>
+        </tr>
+        <tr>
+            <td>
+            <ol>
+                <li>The Chinese input method with the <span class="highlight1">lowest </span> word selection rate.</li>
+                <li><span class="highlight1">Constantly updating and maintaining.</span></li>
+                <li>It provides a large word base.</li>
+            </ol>
+            </td>
+            <td>
+            <ol>
+                <li>You must know how to write that word in order to type it out.</li>
+                <li>It takes time to <span class="highlight1">learn the split word principle </span>, and it is a bit complicated and difficult to learn.</li>
+            </ol>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>Our experience:</h2>
+    <p><img src="Reymond.jpeg" width="100"/><span>Reymond</span>: If you are proficient, this is the fastest input method, and because the word selection rate is very low, it greatly speeds up the efficiency of typing.</p>
+    <p><img src="girl1.png" width="100"/><span>Winkie</span>: At the beginning, I used Simplified Cangjie, but many people recommended Cangjie. It is indeed more practical after proficienc</p>
+    <p><img src="Terrence.jpeg" width="100"/><span>Terrence</span>:  Very convenient input method, because both simplified and traditional characters can be typed. Very convenient input method, because both simplified and traditional characters can be typed, unlike other input methods that often only limit one type. I will use both mainland websites and websites in Hong Kong and Macau. An input method that can accommodate both simplified and traditional Chinese saves a lot of time and trouble.</p>
+    <p><img src="Kevin.jpeg" width="100"/><span>Kevin</span>: Learning Cangjie is very difficult for me, because the split word principle is very complicated, not as simple as other input methods.</p>
+    
+    <img src="Users.jpeg" width="100"/><div style="display: inline-block;" id="opinionDisplay"></div>
+    <textarea id="opinion" rows="4" cols="50">Tell us do you like this method!</textarea>
+    <button onclick="submitOpinion()">Submit</button>
+<br>
+
+    <a href="index.html"target="_blank">Back to main page</a><p align="right"><a href="quiz.html"target="_blank">Next page</a></p>
+
+    <script>
+        function submitOpinion() {
+            var opinionText = document.getElementById("opinion").value;
+            var opinionDisplay = document.getElementById("opinionDisplay");
+            opinionDisplay.innerHTML = opinionText;
+            document.getElementById("opinion").value = "";
+        }
+    </script>
+</div>
+
+</body>
+</html>

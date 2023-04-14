@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Pinyin input method</title> 
+</head>
+<meta charset = "UTF-8">
+<style>
+
+    body {
+            background-color: #f1ee8e;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 150px;
+            background-color: skyblue;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index:1;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .content{
+            margin-left: 180px;
+            z-index: 2;
+        }
+
+
+
+
+    #blu{
+        color: rgb(100, 149, 237 );
+        font-weight : bold;
+    }
+    
+    #re{
+        color: rgb(192, 57, 43);
+        font-weight : bold;
+    }
+    
+    table, td{
+        border:1px solid black}
+    }
+
+    .highlight{color: red;}
+    .highlight1{background-color: yellow;}
+
+    
+</style>
+<style>
+    span { color:red;
+        font-weight : bold;}    
+</style>
+
+<body>
+    <div class="sidebar"> 
+        <a href="index.html">Main Page</a>
+        <a href="page 1.html">Stroke count method</a>
+        <a href="page 2.html">Pinyin input method</a>
+        <a href="page 3.html">Voice input method</a>
+        <a href="page 4.html">Cangjie input method</a>
+        <a href="Quiz.html">Quiz</a>
+        <a href="Reference.html">Reference List and Discovery</a>
+
+    </div>
+    <div class="content">
+       <h1> CS1102 - Course Project - 2022/2023 Semester B </h1>
+
+    <div>
+        <table>
+        <tr>
+            <td>Name</td>
+            <td>SID</td>
+        </tr>
+        
+        <tr>
+            <td>Wong Wing Kiu</td>
+            <td>55696770</td>
+        </tr>
+        
+        <tr>
+            <td>Cheng Chun Kit</td>
+            <td>56418743</td>
+        </tr>
+        
+        <tr>
+            <td>Chan Reymond Young</td>
+            <td>56621155</td>
+        </tr>
+        
+        <tr>
+            <td>Lam Kevin</td>
+            <td>56617479</td>
+        </tr>
+        </table>
+    </div> 
+    <div>
+    <h1>Pinyin input method</h1>
+    <center><img src="https://i.imgur.com/M6GHcL1.png" width="400"/></center>
+    <p>The Pinyin input method is one of the most <span class="highlight"> widely </span> used Chinese input methods. Pinyin is a Romanization system for Mandarin similar to the Latin alphabet. Different companies design different versions of the Pinyin input method, for example, <span class="highlight"> Sogou Pinyin and Google Pinyin</span>. Still, the rationale behind it is the same, the user simply enters the pinyin of a Chinese character and selects the word from the recommendation. </p>
+    <br/>
+    <p>Learn more about Hanyu Pinyin <a href="https://www.ames.cam.ac.uk/undergraduates/undergraduate-resource/chinese-part-ia-information-incoming-students/introduction" target="_blank">here</a></p>
+    <div>
+        <table>
+        <tr>
+            <td>Advantages</td>
+            <td>Disadvantages</td>
+        </tr>
+        <tr>
+            <td>
+            <ol>
+                <li>Pinyin is <span class="1">easy </span> to learn for people with adequate Mandarin knowledge.</li>
+                <li>The typing speed is <span class="highlight1"> fast </span> once familiar since it uses the same QWERTY keyboard setup as most people.</li>
+                <li>The method contains <span class="highlight1"> prediction and correction functions </span> that increase typing speed.</li>
+                <li>It provides a large word base.</li>
+            </ol>
+            </td>
+            <td>
+            <ol>
+                <li>The method is <span class="highlight1">complicated </span> for the non-Mandarin speaker or people unfamiliar with pinyin.</li>
+                <li>There are multiple versions of the pinyin input method. </li>
+            </ol>
+            </td>
+        </tr>
+    </table>
+    </div>        
+    <h2>Our experience:</h2>
+    <p><img src="Reymond.jpeg" width="100"/><span>Reymond</span>: I prefer typing in double pinyin. You can type fast using consonant keys. This method is much faster and more efficient than typing out each character individually.</p>
+
+    <p><img src="girl1.png" width="100"/><span>Winkie</span>: There are too many similar words to choose from, and you may get confused. Other than that, the user interface is intuitive and easy to use.</p>
+    <p><img src="Terrence.jpeg" width="100"/><span>Terrence</span>: It is similar to typing in English. I get used to it very soon! Sometimes you might forget how to write a word, but using Pinyin input will never have this problem.</p>
+    <p><img src="Kevin.jpeg" width="100"/><span>Kevin</span>: I am not good at Mandarin, so I need to occasionally search for the pinyin of different words. The accuracy of the pinyin input method can also be affected by my pronunciation and spelling habits, lowering my typing efficiency.</p>
+
+    <img src="Users.jpeg" width="100"/><div style="display: inline-block;" id="opinionDisplay"></div>
+    <textarea id="opinion" rows="4" cols="50">Tell us do you like this method!</textarea>
+    <button onclick="submitOpinion()">Submit</button>
+    <br>
+    
+    <a href="index.html" target="_blank">Back to main page</a><p align="right"><a href="page 3.html"target="_blank">Next page</a></p>
+
+
+<script>
+        function submitOpinion() {
+            var opinionText = document.getElementById("opinion").value;
+            var opinionDisplay = document.getElementById("opinionDisplay");
+            opinionDisplay.innerHTML = opinionText;
+            document.getElementById("opinion").value = "";
+        }
+    </script>
+
+    <div>
+    </div>
+</body>
+</html>

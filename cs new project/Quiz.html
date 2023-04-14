@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title> 
+</head>
+<meta charset = "UTF-8">
+<style>
+
+    body {
+            background-color: #f1ee8e;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 150px;
+            background-color: skyblue;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index:1;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .content{
+            margin-left: 180px;
+            z-index: 2;
+        }
+
+    span{
+        color: red;
+    } 
+    table, td{
+        border:1px solid black}
+    }
+
+</style>
+<body>
+    <div class="sidebar">
+        <a href="index.html">Main Page</a>
+        <a href="page 1.html">Stroke count method</a>
+        <a href="page 2.html">Pinyin input method</a>
+        <a href="page 3.html">Voice input method</a>
+        <a href="page 4.html">Cangjie input method</a>
+        <a href="Quiz.html">Quiz</a>
+        <a href="Reference.html">Reference List and Discovery</a>
+    </div>
+    <div class="content">
+        <h1> CS1102 - Course Project - 2022/2023 Semester B </h1>
+    <div>
+        <table>
+        <tr>
+            <td>Name</td>
+            <td>SID</td>
+        </tr>
+        
+        <tr>
+            <td>Wong Wing Kiu</td>
+            <td>55696770</td>
+        </tr>
+        
+        <tr>
+            <td>Cheng Chun Kit</td>
+            <td>56418743</td>
+        </tr>
+        
+        <tr>
+            <td>Chan Reymond Young</td>
+            <td>56621155</td>
+        </tr>
+        
+        <tr>
+            <td>Lam Kevin</td>
+            <td>56617479</td>
+        </tr>
+        </table>
+    </div> 
+    <h1>Quiz</h1>
+
+    <img src="https://canopylab.com/wp-content/uploads/2020/05/Working-with-adaptive-quizzes-A-beginners-guide.jpg" width=500/>
+
+    <p>Let's have a quiz!</p>
+    
+    <p>1. Which of the following is <span>NOT</span> a stroke used in the Stroke count method?</p>    
+  
+    <input type="radio" name="q1" id="q1a" value="A">Horizontal
+    <input type="radio" name="q1" id="q1b" value="B">Zag
+    <input type="radio" name="q1" id="q1c" value="C">Throw
+    <input type="radio" name="q1" id="q1d" value="D">Press
+<br>
+   <button onclick="checkAnswer(1)">Submit</button>
+
+   <br><br>
+
+    <p>2. Which input method is <span>MOST suitable </span> for people with excellent Mandarin skills?</p>    
+
+    <input type="radio" name="q2" id="q2a" value="A">Stroke count method
+    <input type="radio" name="q2" id="q2b" value="B">Pinyin input method
+    <input type="radio" name="q2" id="q2c" value="C">Voice input method
+    <input type="radio" name="q2" id="q2d" value="D">Cangjie input method
+<br>
+   <button onclick="checkAnswer(2)">Submit</button>
+<br><br>
+<img src="QuizImage.jpeg" align="right" width=200/>
+
+   <p>3. How many <span>"Cangjie alphabets"</span> have been summed up by the Cangjie input method? </p>    
+   <input type="radio" name="q3" id="q3a" value="A">24
+   <input type="radio" name="q3" id="q3b" value="B">25
+    <input type="radio" name="q3" id="q3c" value="C">75
+    <input type="radio" name="q3" id="q3d" value="D">76
+  <br>
+   <button onclick="checkAnswer(3)">Submit</button>
+<br><br>
+
+<p>4. How many words can be typed by voice input in <span> ONE </span>minute? </p>    
+   <input type="radio" name="q4" id="q4a" value="A">0-100
+   <input type="radio" name="q4" id="q4b" value="B">101-200
+    <input type="radio" name="q4" id="q4c" value="C">201-300
+    <input type="radio" name="q4" id="q4d" value="D">301-400
+  <br>
+   <button onclick="checkAnswer(4)">Submit</button>
+<br><br>
+
+<p>5. Which Chinese input method do you prefer?</p>
+<select id="inputMethod">
+  <option value="strokeCount">Stroke count method</option>
+  <option value="pinyin">Pinyin input method</option>
+  <option value="voice">Voice input method</option>
+  <option value="cangjie">Cangjie input method</option>
+</select>
+<button onclick="showMessage()">Submit</button>
+<br>
+<br>
+
+
+<a href="index.html"target="_blank">Back to main page</a><p align="right">
+
+
+   <script type="text/javascript">
+
+    function showMessage() {
+    var inputMethod = document.getElementById("inputMethod").value;
+    var reason = prompt("Thank you for your response! You have selected the " + inputMethod + " as your preferred input method. Why did you choose this method?");
+    var message = "Thank you for your response! You have selected the " + inputMethod + " as your preferred input method. Your reason for selecting this method is:"+reason+ ". Hope you learn new knowledge in our website!" ;
+    alert(message);
+  }
+
+
+        function checkAnswer(questionNum) {
+            let answer = '';
+            if (questionNum == 1) {
+                answer = 'q1d';
+            }
+            if (questionNum == 2) {
+                answer = 'q2b';}
+            if (questionNum == 3) {
+                answer = 'q3a';
+            }
+            if (questionNum == 4) {
+                answer = 'q4c';
+            }
+
+            let selectedAnswer = '';
+            let radioButtons = document.getElementsByName("q" + questionNum);
+            for (let i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    selectedAnswer = radioButtons[i].id;
+                    break;
+                }
+            }
+
+            if (selectedAnswer == answer) {
+                alert("You are correct!");
+            } else {
+                alert("Wrong answer try again!");
+            }
+        }
+   </script>
+</div>
+</body>
+</html>
